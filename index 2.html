@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style 2.css" />
+    <title>Navbar Responsif</title>
+    <link
+      rel="website icon"
+      type="jpg"
+      href="WhatsApp Image 2025-03-09 at 12.44.57_5d7674b7.jpg"
+    />
+  </head>
+  <body>
+    <div class="parallax intro">
+      <nav class="navbar">
+        <div class="logo">
+          <a href="index 1.html">Dashboard</a>
+        </div>
+        <div class="menu-toggle" id="mobile-menu">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </div>
+        <ul class="nav-list">
+          <li><a href="#">Beranda</a></li>
+          <li><a href="#">Tentang</a></li>
+          <li><a href="#">Layanan</a></li>
+          <li><a href="#">Kontak</a></li>
+        </ul>
+      </nav>
+
+      <script>
+        const mobileMenu = document.getElementById("mobile-menu");
+        const navList = document.querySelector(".nav-list");
+
+        mobileMenu.addEventListener("click", () => {
+          navList.classList.toggle("active");
+        });
+      </script>
+
+      <section id="home">
+        <div class="leftHome">
+          <h3>AL IRSYAD AL ISLAMIYYAH</h3>
+          <h2>segmentasi</h2>
+          <p class="desc">
+            <ul>
+              <li><a >masjid</a></li>
+              <li><a>ormas</a></li>
+              <li><a >Pendidikan dasar dan menengah islam</a></li>
+              <li><a >pondok pesantren</a></li>
+              <li><a >pts islam</a></li>
+              <li><a >ZISWAF Non Pemerintah</a></li>
+              
+
+
+            </ul>
+           
+          </p>
+          <!-- <h2> We Boost Your Website Traffic </h2> -->
+        </div>
+        <img class="rightHome" src="download.jpg" alt="" />
+      </section>
+
+     
+    </div>
+
+    <div class="container">
+      <h1>Tabel Data</h1>
+      <table id="dataTable">
+          <thead>
+              <tr>
+                  <th onclick="sortTable(0)">Total 31 Des'24</th>
+                  <th onclick="sortTable(1)">Total 31 Jan'25</th>
+                  <th onclick="sortTable(2)">Total 28 Feb'25</th>
+                  <th onclick="sortTable(3)">Total 03 Mar'25</th>
+              </tr>
+          </thead>
+          <tbody>
+              <tr>
+                  <td>67,625,117,875</td>
+                  <td>66,880,038,934</td>
+                  <td>67,263,729,893,48</td>
+                  <td>68,266,029,387.76</td>
+              </tr>
+              
+          </tbody>
+      </table>
+  </div>
+
+  <script >function sortTable(columnIndex) {
+    const table = document.getElementById("dataTable");
+    const tbody = table.tBodies[0];
+    const rows = Array.from(tbody.rows);
+    const isAscending = tbody.dataset.sortOrder === "asc";
+
+    rows.sort((a, b) => {
+        const aText = a.cells[columnIndex].textContent.trim();
+        const bText = b.cells[columnIndex].textContent.trim();
+
+        return isAscending 
+            ? aText.localeCompare(bText) 
+            : bText.localeCompare(aText);
+    });
+
+    // Toggle sort order
+    tbody.dataset.sortOrder = isAscending ? "desc" : "asc";
+
+    // Append sorted rows back to the tbody
+    rows.forEach(row => tbody.appendChild(row));
+}</script>
+  </body>
+</html>
