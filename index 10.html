@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style 2.css" />
-    <title>Navbar Responsif</title>
+    <title>JAMIAT KHEIR</title>
     <link
       rel="website icon"
       type="jpg"
@@ -228,7 +228,7 @@ tr:hover {
     <div class="parallax intro">
       <nav class="navbar">
         <div class="logo">
-          <a href="index 1.html">Dashboard</a>
+          <a href="data.html">Dashboard</a>
         </div>
         <div class="menu-toggle" id="mobile-menu">
           <span class="bar"></span>
@@ -254,18 +254,17 @@ tr:hover {
 
       <section id="home">
         <div class="leftHome">
-          <h3>IKATAN CENDEKIAWAN MUSLIM INDONESIA</h3>
+          <h3>JAMIAT KHEIR</h3>
           <h2>Sigmentasi</h2>
           <p class="desc">
             <ul>
-              <li><a>ormas</a></li>
-              <li><a>yayasan keislaman</a></li>
-              <li><a >ZISWAF Non Pemerintah</a></li>
+              <li><a>Pendidikan Dasar Dan Menengah</a></li>
+              
             </ul>
 
           </p>
         </div>
-        <img class="rightHome" src="download (2).png" alt="" />
+        <img class="rightHome" src="download (5).png" alt="" />
       </section>
 
       <section id="about">
@@ -284,10 +283,17 @@ tr:hover {
             <tbody>
               <tr>
                 
-               <td>450,224,230</td>  	
-                <td>424,504,244</td>  
-                 <td>280,872,834 </td>	 	
-                 <td>285,745,484 </td>   
+              
+              <td> 6,532,449,362 </td>
+                
+              <td> 6,553,225,796 </td>
+                
+              <td>  6,293,623,963 </td>
+                
+              <td>  6,455,638,463 </td>
+
+
+  
 
               </tr>
              
@@ -320,6 +326,65 @@ tr:hover {
       </section>
     </div>
 
-    <button><a href="Nasabah_Pareto_ORMAS_03_Maret_2025(a).xlsx">next</a></button>
+<br>
+<br>
+<br>
+
+    <section id="about">
+      <div class="container">
+        <h1>Pendidikan Dasar dan Menengah</h1>
+        <table id="dataTable">
+          <thead>
+            <tr>
+              <th onclick="sortTable(0)">Total 31 Des'24</th>
+              <th onclick="sortTable(1)">Total 31 Jan'25</th>
+              <th onclick="sortTable(2)">Total 28 Feb'25</th>
+              <th onclick="sortTable(3)">Total 03 Mar'25</th>
+             
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              
+           <td>  6,532,449,362 </td>
+              
+           <td>  6,553,225,796 </td>
+              
+           <td> 6,293,623,963 </td>
+              
+           <td> 6,455,638,463 </td>
+   
+
+            </tr>
+           
+          </tbody>
+        </table>
+      </div>
+      <script>
+        function sortTable(columnIndex) {
+          const table = document.getElementById("dataTable");
+          const tbody = table.tBodies[0];
+          const rows = Array.from(tbody.rows);
+          const isAscending = tbody.dataset.sortOrder === "asc";
+
+          rows.sort((a, b) => {
+            const aText = a.cells[columnIndex].textContent.trim();
+            const bText = b.cells[columnIndex].textContent.trim();
+
+            return isAscending
+              ? aText.localeCompare(bText)
+              : bText.localeCompare(aText);
+          });
+
+          // Toggle sort order
+          tbody.dataset.sortOrder = isAscending ? "desc" : "asc";
+
+          // Append sorted rows back to the tbody
+          rows.forEach((row) => tbody.appendChild(row));
+        }
+      </script>
+    </section>
+  </div>
+
   </body>
 </html>

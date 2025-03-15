@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style 2.css" />
-    <title>Navbar Responsif</title>
+    <title>DEWAN MASJID INDONESIA</title>
     <link
       rel="website icon"
       type="jpg"
@@ -228,7 +228,7 @@ tr:hover {
     <div class="parallax intro">
       <nav class="navbar">
         <div class="logo">
-          <a href="index 1.html">Dashboard</a>
+          <a href="data.html">Dashboard</a>
         </div>
         <div class="menu-toggle" id="mobile-menu">
           <span class="bar"></span>
@@ -254,21 +254,22 @@ tr:hover {
 
       <section id="home">
         <div class="leftHome">
-          <h3>IKATAN DAI INDONESIA</h3>
+          <h3>DEWAN MASJID INDONESIA</h3>
           <h2>Sigmentasi</h2>
           <p class="desc">
             <ul>
-              
+              <li><a>Masjid</a></li>
               <li><a>ormas</a></li>
-              <li><a >Pendidikan dasar dan menengah islam</a></li>
-              <li><a >pondok pesantren</a></li>
+              
+              <li><a >Yayasan keislaman</a></li>
+              
               <li><a >ZISWAF Non Pemerintah</a></li>
             
             </ul>
 
           </p>
         </div>
-        <img class="rightHome" src="download (3).png" alt="" />
+        <img class="rightHome" src="download (10) -dmi .png" alt="" />
       </section>
 
       <section id="about">
@@ -286,10 +287,14 @@ tr:hover {
             </thead>
             <tbody>
               <tr>
-               <td>2,049,198,823</td> 
-               <td> 2,044,908,745 </td>
-               <td> 1,800,572,416 </td>
-               <td> 1,828,878,940 </td>
+              <td>  4,440,149,099 </td>
+                
+              <td>  6,543,724,887 </td>
+                
+              <td>  5,608,522,254 	</td>
+                
+              <td>  6,179,773,153 </td>
+
               </tr>
              
             </tbody>
@@ -321,6 +326,224 @@ tr:hover {
       </section>
     </div>
 
-    <button><a href="Nasabah_Pareto_ORMAS_03_Maret_2025(a).xlsx">next</a></button>
+    <section id="about">
+      <div class="container">
+        <h1>Masjid</h1>
+        <table id="dataTable">
+          <thead>
+            <tr>
+              <th onclick="sortTable(0)">Total 31 Des'24</th>
+              <th onclick="sortTable(1)">Total 31 Jan'25</th>
+              <th onclick="sortTable(2)">Total 28 Feb'25</th>
+              <th onclick="sortTable(3)">Total 03 Mar'25</th>
+             
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+            <td> 33,293,219 	</td>
+              
+            <td>  34,280,236 	</td>
+              
+            <td>  32,480,918 	</td>
+              
+            <td>  41,580,236 </td>
+
+            </tr>
+           
+          </tbody>
+        </table>
+      </div>
+      <script>
+        function sortTable(columnIndex) {
+          const table = document.getElementById("dataTable");
+          const tbody = table.tBodies[0];
+          const rows = Array.from(tbody.rows);
+          const isAscending = tbody.dataset.sortOrder === "asc";
+
+          rows.sort((a, b) => {
+            const aText = a.cells[columnIndex].textContent.trim();
+            const bText = b.cells[columnIndex].textContent.trim();
+
+            return isAscending
+              ? aText.localeCompare(bText)
+              : bText.localeCompare(aText);
+          });
+
+          // Toggle sort order
+          tbody.dataset.sortOrder = isAscending ? "desc" : "asc";
+
+          // Append sorted rows back to the tbody
+          rows.forEach((row) => tbody.appendChild(row));
+        }
+      </script>
+    </section>
+  </div>
+
+  <section id="about">
+    <div class="container">
+      <h1>Ormas</h1>
+      <table id="dataTable">
+        <thead>
+          <tr>
+            <th onclick="sortTable(0)">Total 31 Des'24</th>
+            <th onclick="sortTable(1)">Total 31 Jan'25</th>
+            <th onclick="sortTable(2)">Total 28 Feb'25</th>
+            <th onclick="sortTable(3)">Total 03 Mar'25</th>
+           
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+          <td>  4,346,542,159 </td>	
+            
+          <td>  6,448,503,445 </td>
+            
+          <td> 5,504,667,000 	</td>
+            
+          <td> 6,066,877,981 </td>
+
+          </tr>
+         
+        </tbody>
+      </table>
+    </div>
+    <script>
+      function sortTable(columnIndex) {
+        const table = document.getElementById("dataTable");
+        const tbody = table.tBodies[0];
+        const rows = Array.from(tbody.rows);
+        const isAscending = tbody.dataset.sortOrder === "asc";
+
+        rows.sort((a, b) => {
+          const aText = a.cells[columnIndex].textContent.trim();
+          const bText = b.cells[columnIndex].textContent.trim();
+
+          return isAscending
+            ? aText.localeCompare(bText)
+            : bText.localeCompare(aText);
+        });
+
+        // Toggle sort order
+        tbody.dataset.sortOrder = isAscending ? "desc" : "asc";
+
+        // Append sorted rows back to the tbody
+        rows.forEach((row) => tbody.appendChild(row));
+      }
+    </script>
+  </section>
+</div>
+
+<section id="about">
+  <div class="container">
+    <h1>Yayasan keislaman</h1>
+    <table id="dataTable">
+      <thead>
+        <tr>
+          <th onclick="sortTable(0)">Total 31 Des'24</th>
+          <th onclick="sortTable(1)">Total 31 Jan'25</th>
+          <th onclick="sortTable(2)">Total 28 Feb'25</th>
+          <th onclick="sortTable(3)">Total 03 Mar'25</th>
+         
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+         <td>1,659,816 </td>
+          
+         <td> 1,659,816 </td>
+          
+         <td>1,719,816 </td>
+          
+         <td> 1,719,816 </td>
+
+        </tr>
+       
+      </tbody>
+    </table>
+  </div>
+  <script>
+    function sortTable(columnIndex) {
+      const table = document.getElementById("dataTable");
+      const tbody = table.tBodies[0];
+      const rows = Array.from(tbody.rows);
+      const isAscending = tbody.dataset.sortOrder === "asc";
+
+      rows.sort((a, b) => {
+        const aText = a.cells[columnIndex].textContent.trim();
+        const bText = b.cells[columnIndex].textContent.trim();
+
+        return isAscending
+          ? aText.localeCompare(bText)
+          : bText.localeCompare(aText);
+      });
+
+      // Toggle sort order
+      tbody.dataset.sortOrder = isAscending ? "desc" : "asc";
+
+      // Append sorted rows back to the tbody
+      rows.forEach((row) => tbody.appendChild(row));
+    }
+  </script>
+</section>
+</div>
+
+
+<section id="about">
+  <div class="container">
+    <h1>ZISWAF non Pemerintah</h1>
+    <table id="dataTable">
+      <thead>
+        <tr>
+          <th onclick="sortTable(0)">Total 31 Des'24</th>
+          <th onclick="sortTable(1)">Total 31 Jan'25</th>
+          <th onclick="sortTable(2)">Total 28 Feb'25</th>
+          <th onclick="sortTable(3)">Total 03 Mar'25</th>
+         
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+        <td> 58,653,905 	</td>
+          
+        <td> 59,281,390 	</td>
+          
+        <td> 69,654,520 </td>
+          
+        <td> 69,595,120 </td>
+
+        </tr>
+       
+      </tbody>
+    </table>
+  </div>
+  <script>
+    function sortTable(columnIndex) {
+      const table = document.getElementById("dataTable");
+      const tbody = table.tBodies[0];
+      const rows = Array.from(tbody.rows);
+      const isAscending = tbody.dataset.sortOrder === "asc";
+
+      rows.sort((a, b) => {
+        const aText = a.cells[columnIndex].textContent.trim();
+        const bText = b.cells[columnIndex].textContent.trim();
+
+        return isAscending
+          ? aText.localeCompare(bText)
+          : bText.localeCompare(aText);
+      });
+
+      // Toggle sort order
+      tbody.dataset.sortOrder = isAscending ? "desc" : "asc";
+
+      // Append sorted rows back to the tbody
+      rows.forEach((row) => tbody.appendChild(row));
+    }
+  </script>
+</section>
+</div>
+
+
+
   </body>
 </html>
