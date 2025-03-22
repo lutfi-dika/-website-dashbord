@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style 2.css" />
-    <title>Navbar Responsif</title>
+    <title>PERSAUDARAAN MUSLIMAH</title>
     <link
       rel="website icon"
       type="jpg"
@@ -114,6 +114,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-around;
+  margin-bottom: 7%;
 }
 
 .leftHome {
@@ -228,7 +229,7 @@ tr:hover {
     <div class="parallax intro">
       <nav class="navbar">
         <div class="logo">
-          <a href="index 1.html">Dashboard</a>
+          <a href="data.html">Dashboard</a>
         </div>
         <div class="menu-toggle" id="mobile-menu">
           <span class="bar"></span>
@@ -254,16 +255,17 @@ tr:hover {
 
       <section id="home">
         <div class="leftHome">
-          <h3>MATHLAUL ANWAR</h3>
+          <h3>PERSAUDARAAN MUSLIMAH</h3>
           <h2>Sigmentasi</h2>
           <p class="desc">
             <ul>
-              <li><a >Pendidikan Dasar dan Menengah keislaman</a></li>
+              <li><a >ormas</a></li>
+              <li><a >Ziswaf non Pemerintah</a></li>
             </ul>
 
           </p>
         </div>
-        <img class="rightHome" src="download.jpg" alt="" />
+        <img class="rightHome" src="images.png" alt="" />
       </section>
 
       <section id="about">
@@ -281,11 +283,14 @@ tr:hover {
             </thead>
             <tbody>
               <tr>
-                <td>94,727,611 	</td>
-                <td> 21,631,750 </td>       	 
-                <td> 18,561,519 	</td>
-                <td>18,541,519 
-                </td>
+              <td>1,827,965,665 </td>	
+                
+              <td>1,705,414,794 </td>
+                
+              <td>1,804,968,677 </td>
+                
+              <td>1,845,049,606 </td>
+
               </tr>
              
             </tbody>
@@ -316,7 +321,122 @@ tr:hover {
         </script>
       </section>
     </div>
+<br>
+<br>
+<br>
 
-    <button><a href="Nasabah_Pareto_ORMAS_03_Maret_2025(a).xlsx">next</a></button>
+<section id="about">
+  <div class="container">
+    <h1>Ormas</h1>
+    <table id="dataTable">
+      <thead>
+        <tr>
+          <th onclick="sortTable(0)">Total 31 Des'24</th>
+          <th onclick="sortTable(1)">Total 31 Jan'25</th>
+          <th onclick="sortTable(2)">Total 28 Feb'25</th>
+          <th onclick="sortTable(3)">Total 03 Mar'25</th>
+         
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+        <td>1,825,724,183 </td>	
+          
+        <td>1,702,183,312 </td>	
+          
+        <td>1,800,347,195 </td>
+
+        <td>1,840,438,124 </td>
+
+        </tr>
+       
+      </tbody>
+    </table>
+  </div>
+  <script>
+    function sortTable(columnIndex) {
+      const table = document.getElementById("dataTable");
+      const tbody = table.tBodies[0];
+      const rows = Array.from(tbody.rows);
+      const isAscending = tbody.dataset.sortOrder === "asc";
+
+      rows.sort((a, b) => {
+        const aText = a.cells[columnIndex].textContent.trim();
+        const bText = b.cells[columnIndex].textContent.trim();
+
+        return isAscending
+          ? aText.localeCompare(bText)
+          : bText.localeCompare(aText);
+      });
+
+      // Toggle sort order
+      tbody.dataset.sortOrder = isAscending ? "desc" : "asc";
+
+      // Append sorted rows back to the tbody
+      rows.forEach((row) => tbody.appendChild(row));
+    }
+  </script>
+</section>
+</div>
+
+<br>
+<br>
+<br>
+
+<section id="about">
+  <div class="container">
+    <h1>Ziswaf non Pemerintah</h1>
+    <table id="dataTable">
+      <thead>
+        <tr>
+          <th onclick="sortTable(0)">Total 31 Des'24</th>
+          <th onclick="sortTable(1)">Total 31 Jan'25</th>
+          <th onclick="sortTable(2)">Total 28 Feb'25</th>
+          <th onclick="sortTable(3)">Total 03 Mar'25</th>
+         
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+        <td>2,241,482 </td>
+          
+        <td>3,231,482 </td>
+          
+        <td>4,621,482 </td>
+          
+        <td>4,611,482 </td>
+
+        </tr>
+       
+      </tbody>
+    </table>
+  </div>
+  <script>
+    function sortTable(columnIndex) {
+      const table = document.getElementById("dataTable");
+      const tbody = table.tBodies[0];
+      const rows = Array.from(tbody.rows);
+      const isAscending = tbody.dataset.sortOrder === "asc";
+
+      rows.sort((a, b) => {
+        const aText = a.cells[columnIndex].textContent.trim();
+        const bText = b.cells[columnIndex].textContent.trim();
+
+        return isAscending
+          ? aText.localeCompare(bText)
+          : bText.localeCompare(aText);
+      });
+
+      // Toggle sort order
+      tbody.dataset.sortOrder = isAscending ? "desc" : "asc";
+
+      // Append sorted rows back to the tbody
+      rows.forEach((row) => tbody.appendChild(row));
+    }
+  </script>
+</section>
+</div>
+
+    
   </body>
 </html>

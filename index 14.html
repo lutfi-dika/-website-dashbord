@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style 2.css" />
-    <title>Navbar Responsif</title>
+    <title>AL WASHLIYAH</title>
     <link
       rel="website icon"
       type="jpg"
@@ -228,7 +228,7 @@ tr:hover {
     <div class="parallax intro">
       <nav class="navbar">
         <div class="logo">
-          <a href="index 1.html">Dashboard</a>
+          <a href="data.html">Dashboard</a>
         </div>
         <div class="menu-toggle" id="mobile-menu">
           <span class="bar"></span>
@@ -254,16 +254,22 @@ tr:hover {
 
       <section id="home">
         <div class="leftHome">
-          <h3>LEMBAGA DAKWAH ISLAM INDONESIA</h3>
+          <h3>AL WASHLIYAH</h3>
          <h2>Sigmentasi</h2>
          <P class="desc">
           <ul>
             <li><a >masjid</a></li>
             <li><a >ormas</a></li>
+            <li><a >Pendidikan dasar dan menengah</a></li>
+            <li><a >Pondok pesantren</a></li>
+            <li><a >Pts islam</a></li>
+            <li><a >Travel haji dan umroh</a></li>
+            <li><a >Ziswaf non Pemerintah</a></li>
+
           </ul>
          </P>
         </div>
-        <img class="rightHome" src="download (6).png" alt="" />
+        <img class="rightHome" src="download 1.png" alt="" />
       </section>
 
       <section id="about">
@@ -280,11 +286,14 @@ tr:hover {
             </thead>
             <tbody>
               <tr>
-               <td>634,646,304 </td>   	  	
+              <td>2,550,449,289 </td>
+                
+              <td>1,908,082,959 </td>
+                
+              <td>1,418,518,322 </td>
+                
+              <td>1,374,861,412 </td>
 
-               <td> 427,869,493 </td>
-               <td> 415,839,215 	</td>
-               <td> 416,321,715 </td>
               </tr>
             </tbody>
           </table>
@@ -314,7 +323,396 @@ tr:hover {
         </script>
       </section>
     </div>
+<br>
+<br>
+<br>
+   
+    <section id="about">
+      <div class="container">
+        <h1>masjid</h1>
+        <table id="dataTable">
+          <thead>
+            <tr>
+              <th onclick="sortTable(0)">Total 31 Des'24</th>
+              <th onclick="sortTable(1)">Total 31 Jan'25</th>
+              <th onclick="sortTable(2)">Total 28 Feb'25</th>
+              <th onclick="sortTable(3)">Total 03 Mar'25</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+            <td>92,912,650 </td>
+              
+            <td>64,910,204 	</td>
+              
+            <td>64,907,649 	</td>
+              
+            <td>63,397,649 </td>
 
-    <button><a href="Nasabah_Pareto_ORMAS_03_Maret_2025(a).xlsx">next</a></button>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <script>
+        function sortTable(columnIndex) {
+          const table = document.getElementById("dataTable");
+          const tbody = table.tBodies[0];
+          const rows = Array.from(tbody.rows);
+          const isAscending = tbody.dataset.sortOrder === "asc";
+
+          rows.sort((a, b) => {
+            const aText = a.cells[columnIndex].textContent.trim();
+            const bText = b.cells[columnIndex].textContent.trim();
+
+            return isAscending
+              ? aText.localeCompare(bText)
+              : bText.localeCompare(aText);
+          });
+
+          // Toggle sort order
+          tbody.dataset.sortOrder = isAscending ? "desc" : "asc";
+
+          // Append sorted rows back to the tbody
+          rows.forEach((row) => tbody.appendChild(row));
+        }
+      </script>
+    </section>
+  </div>
+
+ <br>
+ <br>
+ <br>
+  <section id="about">
+    <div class="container">
+      <h1>Ormas</h1>
+      <table id="dataTable">
+        <thead>
+          <tr>
+            <th onclick="sortTable(0)">Total 31 Des'24</th>
+            <th onclick="sortTable(1)">Total 31 Jan'25</th>
+            <th onclick="sortTable(2)">Total 28 Feb'25</th>
+            <th onclick="sortTable(3)">Total 03 Mar'25</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+          <td>320,681,030 </td>
+            
+          <td>258,728,907 </td>
+            
+          <td>155,428,639 </td>
+            
+          <td>155,638,639 </td>
+
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <script>
+      function sortTable(columnIndex) {
+        const table = document.getElementById("dataTable");
+        const tbody = table.tBodies[0];
+        const rows = Array.from(tbody.rows);
+        const isAscending = tbody.dataset.sortOrder === "asc";
+
+        rows.sort((a, b) => {
+          const aText = a.cells[columnIndex].textContent.trim();
+          const bText = b.cells[columnIndex].textContent.trim();
+
+          return isAscending
+            ? aText.localeCompare(bText)
+            : bText.localeCompare(aText);
+        });
+
+        // Toggle sort order
+        tbody.dataset.sortOrder = isAscending ? "desc" : "asc";
+
+        // Append sorted rows back to the tbody
+        rows.forEach((row) => tbody.appendChild(row));
+      }
+    </script>
+  </section>
+</div>
+<br>
+<br>
+<br>
+
+<section id="about">
+  <div class="container">
+    <h1>Pendidikan dasar dan menengah</h1>
+    <table id="dataTable">
+      <thead>
+        <tr>
+          <th onclick="sortTable(0)">Total 31 Des'24</th>
+          <th onclick="sortTable(1)">Total 31 Jan'25</th>
+          <th onclick="sortTable(2)">Total 28 Feb'25</th>
+          <th onclick="sortTable(3)">Total 03 Mar'25</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+        
+        <td>1,224,355,675 </td>
+          
+        <td>975,520,404 </td>
+          
+        <td>636,600,348 </td>
+          
+        <td>577,047,098 </td>
+
+
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <script>
+    function sortTable(columnIndex) {
+      const table = document.getElementById("dataTable");
+      const tbody = table.tBodies[0];
+      const rows = Array.from(tbody.rows);
+      const isAscending = tbody.dataset.sortOrder === "asc";
+
+      rows.sort((a, b) => {
+        const aText = a.cells[columnIndex].textContent.trim();
+        const bText = b.cells[columnIndex].textContent.trim();
+
+        return isAscending
+          ? aText.localeCompare(bText)
+          : bText.localeCompare(aText);
+      });
+
+      // Toggle sort order
+      tbody.dataset.sortOrder = isAscending ? "desc" : "asc";
+
+      // Append sorted rows back to the tbody
+      rows.forEach((row) => tbody.appendChild(row));
+    }
+  </script>
+</section>
+</div>
+<br>
+<br>
+<br>
+
+<section id="about">
+  <div class="container">
+    <h1>Pondok pesantren</h1>
+    <table id="dataTable">
+      <thead>
+        <tr>
+          <th onclick="sortTable(0)">Total 31 Des'24</th>
+          <th onclick="sortTable(1)">Total 31 Jan'25</th>
+          <th onclick="sortTable(2)">Total 28 Feb'25</th>
+          <th onclick="sortTable(3)">Total 03 Mar'25</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+        <td>50,000 </td>
+          
+        <td>50,000 </td>	
+          
+        <td>50,000 </td>	
+          
+        <td>50,000 </td> 
+
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <script>
+    function sortTable(columnIndex) {
+      const table = document.getElementById("dataTable");
+      const tbody = table.tBodies[0];
+      const rows = Array.from(tbody.rows);
+      const isAscending = tbody.dataset.sortOrder === "asc";
+
+      rows.sort((a, b) => {
+        const aText = a.cells[columnIndex].textContent.trim();
+        const bText = b.cells[columnIndex].textContent.trim();
+
+        return isAscending
+          ? aText.localeCompare(bText)
+          : bText.localeCompare(aText);
+      });
+
+      // Toggle sort order
+      tbody.dataset.sortOrder = isAscending ? "desc" : "asc";
+
+      // Append sorted rows back to the tbody
+      rows.forEach((row) => tbody.appendChild(row));
+    }
+  </script>
+</section>
+</div>
+
+<br>
+<br>
+<br>
+
+<section id="about">
+  <div class="container">
+    <h1>Pts islam</h1>
+    <table id="dataTable">
+      <thead>
+        <tr>
+          <th onclick="sortTable(0)">Total 31 Des'24</th>
+          <th onclick="sortTable(1)">Total 31 Jan'25</th>
+          <th onclick="sortTable(2)">Total 28 Feb'25</th>
+          <th onclick="sortTable(3)">Total 03 Mar'25</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+        <td>858,904,984 </td>	
+          
+        <td>584,328,494 </td>	
+          
+        <td>532,986,736 </td>
+          
+        <td>550,183,076 </td>
+
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <script>
+    function sortTable(columnIndex) {
+      const table = document.getElementById("dataTable");
+      const tbody = table.tBodies[0];
+      const rows = Array.from(tbody.rows);
+      const isAscending = tbody.dataset.sortOrder === "asc";
+
+      rows.sort((a, b) => {
+        const aText = a.cells[columnIndex].textContent.trim();
+        const bText = b.cells[columnIndex].textContent.trim();
+
+        return isAscending
+          ? aText.localeCompare(bText)
+          : bText.localeCompare(aText);
+      });
+
+      // Toggle sort order
+      tbody.dataset.sortOrder = isAscending ? "desc" : "asc";
+
+      // Append sorted rows back to the tbody
+      rows.forEach((row) => tbody.appendChild(row));
+    }
+  </script>
+</section>
+</div>
+<br>
+<br>
+<br>
+<section id="about">
+  <div class="container">
+    <h1>Travel haji dan umroh</h1>
+    <table id="dataTable">
+      <thead>
+        <tr>
+          <th onclick="sortTable(0)">Total 31 Des'24</th>
+          <th onclick="sortTable(1)">Total 31 Jan'25</th>
+          <th onclick="sortTable(2)">Total 28 Feb'25</th>
+          <th onclick="sortTable(3)">Total 03 Mar'25</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+        <td>29,995,000 </td>
+          
+        <td>995,000 </td>
+          
+        <td>2,995,000 </td>	
+          
+        <td>2,995,000 </td>
+
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <script>
+    function sortTable(columnIndex) {
+      const table = document.getElementById("dataTable");
+      const tbody = table.tBodies[0];
+      const rows = Array.from(tbody.rows);
+      const isAscending = tbody.dataset.sortOrder === "asc";
+
+      rows.sort((a, b) => {
+        const aText = a.cells[columnIndex].textContent.trim();
+        const bText = b.cells[columnIndex].textContent.trim();
+
+        return isAscending
+          ? aText.localeCompare(bText)
+          : bText.localeCompare(aText);
+      });
+
+      // Toggle sort order
+      tbody.dataset.sortOrder = isAscending ? "desc" : "asc";
+
+      // Append sorted rows back to the tbody
+      rows.forEach((row) => tbody.appendChild(row));
+    }
+  </script>
+</section>
+</div>
+<br>
+<br>
+<br>
+
+<section id="about">
+  <div class="container">
+    <h1>Ziswaf non Pemerintah
+    </h1>
+    <table id="dataTable">
+      <thead>
+        <tr>
+          <th onclick="sortTable(0)">Total 31 Des'24</th>
+          <th onclick="sortTable(1)">Total 31 Jan'25</th>
+          <th onclick="sortTable(2)">Total 28 Feb'25</th>
+          <th onclick="sortTable(3)">Total 03 Mar'25</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+        <td>23,549,950 	</td>
+          
+        <td>23,549,950 	</td>
+          
+        <td>25,549,950 	</td>
+          
+        <td>25,549,950 </td>
+
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <script>
+    function sortTable(columnIndex) {
+      const table = document.getElementById("dataTable");
+      const tbody = table.tBodies[0];
+      const rows = Array.from(tbody.rows);
+      const isAscending = tbody.dataset.sortOrder === "asc";
+
+      rows.sort((a, b) => {
+        const aText = a.cells[columnIndex].textContent.trim();
+        const bText = b.cells[columnIndex].textContent.trim();
+
+        return isAscending
+          ? aText.localeCompare(bText)
+          : bText.localeCompare(aText);
+      });
+
+      // Toggle sort order
+      tbody.dataset.sortOrder = isAscending ? "desc" : "asc";
+
+      // Append sorted rows back to the tbody
+      rows.forEach((row) => tbody.appendChild(row));
+    }
+  </script>
+</section>
+</div>
+
+
+
   </body>
 </html>
